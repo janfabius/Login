@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -53,20 +55,28 @@ public class MainActivity extends AppCompatActivity {
 
                 // loggare sul database accesso
 
+
+                Toast.makeText(getApplicationContext(),"IN SVILUPPO open main ",Toast.LENGTH_SHORT).show();
+
                 // cambiare in base alla propria app
-                Intent scIntent = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(scIntent);
+               // Intent scIntent = new Intent(MainActivity.this, MainActivity.class);
+               // startActivity(scIntent);
+            }
+        });
+
+
+        sync.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(getApplicationContext(),"IN SVILUPPO aggiornare user da db ",Toast.LENGTH_SHORT).show();
             }
         });
 
 
 
-
-
-
-
-
-
-
     }
+
+
+
 }

@@ -1,11 +1,15 @@
 package com.example.logingui;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
+import android.text.method.DigitsKeyListener;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -28,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     TextInputLayout textInputLayout;
     AutoCompleteTextView autoCompleteTextView;
     EditText password;
+
+    private String ipServer_log = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +108,36 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_serverIp:
 
              Toast.makeText(getApplicationContext(),"IN SVILUPPO Dialog per indirizzo ip",Toast.LENGTH_SHORT).show();
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Inserisci Server IP");
+
+                // Set up the input
+                final EditText input = new EditText(this);
+                // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                input.setInputType(InputType.TYPE_CLASS_NUMBER );
+                input.setKeyListener(DigitsKeyListener.getInstance("0123456789."));
+
+                builder.setView(input);
+
+                // Set up the buttons
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ipServer_log = input.getText().toString();
+                    }
+                });
+                builder.setNegativeButton("Cancella", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+                builder.show();
+
+
 
                 return true;
         }

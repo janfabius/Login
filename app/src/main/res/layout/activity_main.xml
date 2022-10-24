@@ -37,13 +37,13 @@
                     android:id="@+id/log_login"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="16dp"
                     android:background="@drawable/shape"
                     android:elevation="10dp"
                     android:text="Log in"
                     app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
                     app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
-                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_remember" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textInputLayout3"
@@ -80,7 +80,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="128dp"
+                    android:layout_marginTop="64dp"
                     android:layout_marginEnd="32dp"
                     android:elevation="20dp"
                     android:hint="Username"
@@ -119,6 +119,22 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/textInputLayout_user"
                     app:srcCompat="@drawable/sync_flat" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_remember"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:button="@drawable/checkbox"
+                    android:soundEffectsEnabled="true"
+                    android:text="Remember Password"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHighlight="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorPrimary"
+                    android:textColorLink="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

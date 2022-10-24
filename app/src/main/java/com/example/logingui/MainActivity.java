@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Inserisci Server IP");
+                builder.setTitle("Server IP");
 
                 // Set up the input
                 final EditText input = new EditText(this);

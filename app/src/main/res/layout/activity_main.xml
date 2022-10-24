@@ -38,6 +38,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:background="@drawable/shape"
+                    android:elevation="10dp"
                     android:text="Log in"
                     app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
                     app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
@@ -46,12 +48,12 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textInputLayout3"
                     android:layout_width="0dp"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:elevation="20dp"
                     android:hint="Password"
                     app:boxBackgroundColor="#1976D2"
-                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidth="0dp"
                     app:hintTextColor="@color/white"
                     app:layout_constraintEnd_toEndOf="@+id/textInputLayout_user"
                     app:layout_constraintStart_toStartOf="@+id/textInputLayout_user"
@@ -61,7 +63,7 @@
                         android:id="@+id/log_password"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#1976D2"
+                        android:background="@drawable/shape"
                         android:inputType="textPassword"
                         android:textColor="@color/white"
                         android:textColorHint="@color/white" />
@@ -71,7 +73,7 @@
                     android:id="@+id/textInputLayout_user"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                     android:layout_width="0dp"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="128dp"
                     android:layout_marginEnd="32dp"
@@ -90,6 +92,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:background="@drawable/shape"
                         android:textColor="@color/white" />
                 </com.google.android.material.textfield.TextInputLayout>
 

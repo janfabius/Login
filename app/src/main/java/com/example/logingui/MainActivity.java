@@ -2,15 +2,18 @@ package com.example.logingui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton sync;
     TextInputLayout textInputLayout;
     AutoCompleteTextView autoCompleteTextView;
+    EditText password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         sync = findViewById(R.id.imageBtn_sync);
         textInputLayout = findViewById(R.id.textInputLayout_user);
         autoCompleteTextView = findViewById(R.id.log_autoUser);
+        password = findViewById(R.id.log_password);
 
         String [] items = {"item1","item2","item3"};
         ArrayAdapter<String> itemAdapter = new ArrayAdapter<>(MainActivity.this,R.layout.dropdown_item, items);
@@ -45,6 +50,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent,View view,int position,long id){
                 Toast.makeText(getApplicationContext(),"selezionato "+parent.getItemAtPosition(position),Toast.LENGTH_SHORT).show();
+
+                //ricordare di chiudere la tastiera
+                InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+                imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
+                password.requestFocus();
+
+
+
             }
         });
 

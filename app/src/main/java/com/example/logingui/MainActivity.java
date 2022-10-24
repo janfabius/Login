@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         getSupportActionBar().setTitle("Log in");
+        getSupportActionBar().setSubtitle("Gui_Scan");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         login = findViewById(R.id.log_login);

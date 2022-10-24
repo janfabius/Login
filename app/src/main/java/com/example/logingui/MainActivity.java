@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         autoCompleteTextView = findViewById(R.id.log_autoUser);
         password = findViewById(R.id.log_password);
 
-        String [] items = {"item1","item2","item3"};
+        String [] items = {"item 1","item 2","item 3","item 4"};
         ArrayAdapter<String> itemAdapter = new ArrayAdapter<>(MainActivity.this,R.layout.dropdown_item, items);
         autoCompleteTextView.setAdapter(itemAdapter);
 

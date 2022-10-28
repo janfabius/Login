@@ -4,7 +4,11 @@
 
     <item
         android:id="@+id/action_serverIp"
-        android:icon="@drawable/server_ip"
+        android:icon="@drawable/ic_baseline_broadcast_on_home_24"
         android:title="Server ip"
         app:showAsAction="always|withText" />
+    <item
+        android:icon="@drawable/ic_baseline_cloud_sync_24"
+        android:title="Sync"
+        app:showAsAction="always" />
 </menu>

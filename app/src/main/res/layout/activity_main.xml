@@ -121,14 +121,6 @@
                             android:textColorLink="@color/colorPrimaryDark"
                             android:textSize="12sp" />
 
-                        <ImageButton
-                            android:id="@+id/imageBtn_sync"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:background="@android:color/transparent"
-                            android:scaleType="centerInside"
-                            app:srcCompat="@drawable/sync_flat" />
-
                         <Button
                             android:id="@+id/log_login"
                             android:layout_width="match_parent"

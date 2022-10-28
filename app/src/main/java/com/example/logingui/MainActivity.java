@@ -28,7 +28,7 @@ import com.google.android.material.textfield.TextInputLayout;
 public class MainActivity extends AppCompatActivity {
 
     Button login;
-    ImageButton sync;
+
     TextInputLayout textInputLayout;
     AutoCompleteTextView autoCompleteTextView;
     EditText password;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         login = findViewById(R.id.log_login);
-        sync = findViewById(R.id.imageBtn_sync);
+
         textInputLayout = findViewById(R.id.textInputLayout_user);
         autoCompleteTextView = findViewById(R.id.log_autoUser);
         password = findViewById(R.id.log_password);
@@ -87,14 +87,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        sync.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Toast.makeText(getApplicationContext(),"IN SVILUPPO aggiornare user da db ",Toast.LENGTH_SHORT).show();
-            }
-        });
 
 
 

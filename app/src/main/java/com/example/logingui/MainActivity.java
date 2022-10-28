@@ -75,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 // loggare sul database accesso
+                // usare il sistema sync già implementato
+
 
 
                 Toast.makeText(getApplicationContext(),"IN SVILUPPO open main ",Toast.LENGTH_SHORT).show();
@@ -138,8 +140,6 @@ public class MainActivity extends AppCompatActivity {
 
                 builder.show();
 
-
-
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -151,7 +151,6 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_login, menu);
         return true;
     }
-
 
 
 }

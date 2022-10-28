@@ -34,106 +34,111 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/logotras" />
 
-                <Button
-                    android:id="@+id/log_login"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/shape"
-                    android:elevation="10dp"
-                    android:text="Log in"
-                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
-                    app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox_remember" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:elevation="20dp"
-                    android:hint="Password"
-                    android:textColorHint="@color/colorYellow"
-                    app:boxBackgroundMode="filled"
-                    app:boxStrokeColor="@android:color/transparent"
-                    app:boxStrokeWidth="0dp"
-                    app:boxStrokeWidthFocused="0dp"
-                    app:hintTextColor="@color/white"
-                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout_user"
-                    app:layout_constraintStart_toStartOf="@+id/textInputLayout_user"
-                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout_user">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/log_password"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/shape"
-                        android:inputType="textPassword"
-                        android:singleLine="true"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/white" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout_user"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="32dp"
                     android:layout_marginTop="64dp"
                     android:layout_marginEnd="32dp"
-                    android:elevation="20dp"
-                    android:hint="Username"
-                    android:textColorHint="@color/colorYellow"
-                    app:boxBackgroundMode="filled"
-                    app:boxCollapsedPaddingTop="2dp"
-                    app:boxStrokeColor="@android:color/transparent"
-                    app:boxStrokeWidth="0dp"
-                    app:boxStrokeWidthFocused="0dp"
-                    app:hintTextColor="@color/white"
+                    android:elevation="12dp"
+                    android:outlineAmbientShadowColor="#7B1FA2"
+                    android:outlineSpotShadowColor="#D32F2F"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="64dp"
+                    app:contentPadding="24dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageBtn_sync"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-                    <AutoCompleteTextView
-                        android:id="@+id/log_autoUser"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/shape"
-                        android:imeOptions="actionNext"
-                        android:singleLine="true"
-                        android:textColor="@color/white" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/imageBtn_sync"
-                    android:layout_width="40dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@android:color/transparent"
-                    android:scaleType="centerInside"
-                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout_user"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textInputLayout_user"
-                    app:srcCompat="@drawable/sync_flat" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout_user"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:elevation="20dp"
+                            android:hint="Username"
+                            android:textColorHint="@color/colorYellow"
+                            app:boxBackgroundMode="filled"
+                            app:boxCollapsedPaddingTop="2dp"
+                            app:boxStrokeColor="@android:color/transparent"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:hintTextColor="@color/white">
 
-                <CheckBox
-                    android:id="@+id/checkBox_remember"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:buttonTint="@color/colorPrimaryBackground"
-                    android:soundEffectsEnabled="true"
-                    android:text="Remember Password"
-                    android:textColor="@color/colorPrimaryBackground"
-                    android:textColorHighlight="@color/colorPrimaryDark"
-                    android:textColorHint="@color/colorPrimary"
-                    android:textColorLink="@color/colorPrimaryDark"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
-                    app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
-                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+                            <AutoCompleteTextView
+                                android:id="@+id/log_autoUser"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/shape"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:textColor="@color/white" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:elevation="20dp"
+                            android:hint="Password"
+                            android:textColorHint="@color/colorYellow"
+                            app:boxBackgroundMode="filled"
+                            app:boxStrokeColor="@android:color/transparent"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:hintTextColor="@color/white">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/log_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/shape"
+                                android:inputType="textPassword"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <CheckBox
+                            android:id="@+id/checkBox_remember"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:buttonTint="@color/colorPrimaryBackground"
+                            android:soundEffectsEnabled="true"
+                            android:text="Remember Password"
+                            android:textColor="@color/colorPrimaryBackground"
+                            android:textColorHighlight="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textColorLink="@color/colorPrimaryDark"
+                            android:textSize="12sp" />
+
+                        <ImageButton
+                            android:id="@+id/imageBtn_sync"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/sync_flat" />
+
+                        <Button
+                            android:id="@+id/log_login"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/shape"
+                            android:elevation="10dp"
+                            android:text="Log in" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
